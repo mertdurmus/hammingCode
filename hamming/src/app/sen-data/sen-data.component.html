@@ -1,0 +1,21 @@
+<h3>Text Alanı</h3>>
+<form [formGroup]="textForm" (ngSubmit)="add()">
+  <div class="form-group">
+      <label for="name">Tmetin</label>
+    <input type="text" name="name" id="name" formControlName="name" class="form-control" placeholder="metni giriniz">
+    <div class="alert alert-danger" *ngIf="textForm.get('name').hasError('required') && textForm.get('name').dirty">Zorunlu</div>
+  </div>
+
+
+          <button type="submit" class="btn btn-success" > gönder </button>
+</form>
+
+<br>
+
+<div class="row"  *ngIf="showMsg">
+  <div class="col-xs-12">
+    <p class="alert alert-success">
+        <strong>Text başarılı bir şekilde gönderildi.</strong>
+    </p>
+  </div>
+</div>

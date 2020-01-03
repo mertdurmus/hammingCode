@@ -1,0 +1,46 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <tbody>
+          <tr>
+            <th >bozulmuş bit'e sahip codewordler</th>
+              <td>{{ brokenList | json }}</td>
+          </tr>
+          <tr>
+            <th>düzeltilmis codeword'ler</th>
+              <td>{{ normalList | json }}</td>
+          </tr>
+          <tr>
+            <th>hatali indexsler</th>
+              <td>{{ index | json }}</td>
+          </tr>
+          <tr>
+              <td>  <button
+                class="btn btn-outline-info btn-sm"
+                (click)="getHammingList()"
+              >
+                getHamming
+              </button></td>
+          </tr>
+      </tbody>
+  </table>
+  <table class="table">
+    <tbody>
+        <tr>
+          <th>gerçek metin</th>
+            <td>{{ text | json }}</td>
+        </tr>
+        <tr>
+            <td>  <button
+              class="btn btn-outline-info btn-sm"
+              (click)="getTexxt()"
+            >
+              metni getir
+            </button></td>
+        </tr>
+    </tbody>
+</table>
+  </div>
+</div>
